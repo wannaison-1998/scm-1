@@ -3,75 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บบริษัททดลอง</title>
+    <title>SCM Energy Service Co., Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        html{
-            scroll-behavior:smooth;
-        }
-
-        .navbar{
-            position:fixed;
-            top:0;
-            left:0;
-            width:100%;
-            background:#003366;
-            padding:15px;
-            text-align:center;
-            box-sizing:border-box;
-        }
-
-        .navbar a{
-            color:white;
-            text-decoration:none;
-            padding:12px 20px;
-            margin:5px;
-            border-radius:5px;
-        }
-
-        .navbar a:hover{
-            background:#0074e4;
-        }
-
-        .hero{
-            padding-top:120px;
-            text-align:center;
-            min-height:100vh;
-            background:#f3f8fc;
-            box-sizing:border-box;
-        }
-
-        .logo{
-            width:350px;
-            max-width:90%;
-        }
-
-        .btn{
-            background:#2f7d32;
-            color:#fff;
-            padding:15px 30px;
-            border-radius:6px;
-            display:inline-block;
-            margin-top:20px;
-            text-decoration:none;
-        } 
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <!-- แถบเมนูด้านบน -->
-    <div class="navbar">
-        <a href="#">หน้าแรก</a>
-        <a href="#about">เกี่ยวกับเรา</a>
-        <a href="#contact">ติดต่อเรา</a>
-    </div>
+    <nav class="bg-slate-900 text-white fixed w-full z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-bolt text-yellow-500 text-3xl"></i>
+                    <span class="font-bold text-xl tracking-wider">SCM ENERGY SERVICE</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-yellow-400 transition duration-300">หน้าแรก</a>
+                        <a href="#about" class="hover:text-yellow-400 transition duration-300">เกี่ยวกับเรา</a>
+                        <a href="#services" class="hover:text-yellow-400 transition duration-300">สินค้าและบริการ</a>
+                        <a href="#contact" class="bg-yellow-500 text-slate-900 px-4 py-2 rounded-md font-semibold hover:bg-yellow-400 transition duration-300">ติดต่อเรา</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <!-- ส่วนเนื้อหาหลัก -->
-    <div class="hero">
-        <img src="https://via.placeholder.com/350x150?text=Company+Logo" alt="Logo" class="logo">
-        <h1>ยินดีต้อนรับสู่เว็บบริษัทของเรา</h1>
-        <p>เว็บตัวอย่างสำหรับทดสอบระบบบน Vercel</p>
-        <a href="#contact" class="btn">ติดต่อเราเลย</a>
-    </div>
+    <section id="home" class="relative bg-cover bg-center h-screen flex items-center" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1920&q=80');">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">SCM ENERGY SERVICE</h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">ผู้นำด้านนวัตกรรมและอุปกรณ์พลังงาน ขับเคลื่อนอุตสาหกรรมสู่อนาคตที่ยั่งยืน</p>
+            <div class="space-x-4">
+                <a href="#services" class="bg-yellow-500 text-slate-900 font-bold px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-400 transition duration-300">ดูบริการของเรา</a>
+                <a href="#about" class="border-2 border-white text-white font-bold px-8 py-3 rounded-lg hover:bg-white hover:text-slate-900 transition duration-300">เกี่ยวกับเรา</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">ประวัติความเป็นมา</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mt-2"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1581094186812-70937fe0702d?auto=format&fit=crop&w=800&q=80" alt="อุตสาหกรรมพลังงาน" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-800">การก้าวข้ามขีดจำกัดจาก SCM Oil Tools สู่ SCM Energy Service</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        บริษัทเริ่มก่อตั้งภายใต้ชื่อ <strong>SCM Oil Tools</strong> โดยมุ่งเน้นการจัดหาและให้บริการอุปกรณ์เครื่องมือคุณภาพสูงสำหรับอุตสาหกรรมขุดเจาะน้ำมันและก๊าซธรรมชาติ ด้วยความเชี่ยวชาญและประสบการณ์อันยาวนาน เราได้รับความไว้วางใจจากพันธมิตรในอุตสาหกรรมพลังงานระดับชั้นนำเสมอมา
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        เพื่อรองรับการเติบโตและการเปลี่ยนแปลงของเทคโนโลยีพลังงานในระดับสากล เราจึงได้เปลี่ยนผ่านสู่ชื่อ <strong>SCM Energy Service</strong> ขยายขอบเขตการดำเนินงานจากการสนับสนุนอุตสาหกรรมน้ำมันและก๊าซ ไปสู่นวัตกรรมพลังงานสะอาด พลังงานทดแทน และการบริหารจัดการพลังงานอย่างครบวงจร
+                    </p>
+                    <div class="border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-50 rounded-r">
+                        <p class="font-semibold text-slate-800">"วิสัยทัศน์ของเราคือการเป็นพันธมิตรทางเทคโนโลยีพลังงานที่น่าเชื่อถือที่สุด และขับเคลื่อนอุตสาหกรรมไปสู่อนาคตอย่างมั่นคง"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">สินค้าและบริการ</h2>
+                <p class="text-gray-600 mt-2">โซลูชันด้านพลังงานแบบครบวงจรสำหรับกลุ่มอุตสาหกรรม</p>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=600&q=80" alt="อุปกรณ์ขุดเจาะ" class="h-48 w-full object-cover">
+                    <div class="p-6">
+                        <div class="text-yellow-500 text-2xl mb-2"><i class="fa-solid fa-oil-well"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">อุปกรณ์สำหรับงานขุดเจาะ (Oil Tools)</h3>
+                        <p class="text-gray-600 text-sm">จัดหาเครื่องมือ และอุปกรณ์อะไหล่คุณภาพสูงระดับมาตรฐานสากลสำหรับแท่นขุดเจาะน้ำมันและก๊าซธรรมชาติ</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80" alt="บริการวิศวกรรม" class="h-48 w-full object-cover">
+                    <div class="p-6">
+                        <div class="text-yellow-500 text-2xl mb-2"><i class="fa-solid fa-gears"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">บริการบำรุงรักษาและวิศวกรรม</h3>
+                        <p class="text-gray-600 text-sm">ทีมวิศวกรผู้เชี่ยวชาญพร้อมให้บริการตรวจเช็ก บำรุงรักษาเชิงป้องกัน และซ่อมบำรุงระบบเครื่องจักรในโรงงานพลังงาน</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=600&q=80" alt="พลังงานสะอาด" class="h-48 w-full object-cover">
+                    <div class="p-6">
+                        <div class="text-yellow-500 text-2xl mb-2"><i class="fa-solid fa-solar-panel"></i></div>
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">โซลูชันพลังงานหมุนเวียน</h3>
+                        <p class="text-gray-600 text-sm">ให้คำปรึกษา ออกแบบ และติดตั้งระบบพลังงานทดแทน เช่น โซลาร์เซลล์อุตสาหกรรม เพื่อเพิ่มประสิทธิภาพการใช้พลังงาน</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900">ติดต่อเรา</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-800">บริษัท เอสซีเอ็ม เอ็นเนอร์ยี่ เซอร์วิส จำกัด</h3>
+                    <p class="text-gray-600">พร้อมยินดีให้คำปรึกษาและตอบคำถามเกี่ยวกับสินค้าและบริการด้านพลังงานทุกชนิด</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <i class="fa-solid fa-location-dot text-yellow-500 text-xl mt-1"></i>
+                            <span class="text-gray-600">อาคาร SCM Tower เลขที่ 123 ถนนพลังงาน อาคารสำนักงานชั้น 10 กรุงเทพมหานคร 10110</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-solid fa-phone text-yellow-500 text-xl"></i>
+                            <span class="text-gray-600">+66 2 123 4567</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fa-solid fa-envelope text-yellow-500 text-xl"></i>
+                            <span class="text-gray-600">contact@scmoiltools.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="space-y-4 bg-gray-50 p-6 rounded-lg shadow-md" onsubmit="event.preventDefault(); alert('ส่งข้อความเรียบร้อยแล้ว');">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">ชื่อ-นามสกุล / บริษัท</label>
+                        <input type="text" required class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">อีเมล</label>
+                        <input type="email" required class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">ข้อความ / สิ่งที่ต้องการติดต่อ</label>
+                        <textarea rows="4" required class="mt-1 w-full p-3 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-slate-900 text-white font-bold py-3 rounded-md hover:bg-slate-800 transition duration-300">ส่งข้อความ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-gray-400 py-8 text-center text-sm">
+        <p>&copy; 2026 SCM Energy Service Co., Ltd. (formerly SCM Oil Tools). All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
