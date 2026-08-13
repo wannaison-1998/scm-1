@@ -1,44 +1,77 @@
-html{
-    scroll-behavior:smooth;
-}
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บบริษัททดลอง</title>
+    <style>
+        html{
+            scroll-behavior:smooth;
+        }
 
-.navbar{
-    position:fixed;
-    width:100%;
-    background:#003366;
-    padding:15px;
-    text-align:center;
-}
+        .navbar{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            background:#003366;
+            padding:15px;
+            text-align:center;
+            box-sizing:border-box;
+        }
 
-.navbar a{
-    color:white;
-    text-decoration:none;
-    padding:12px 20px;
-    margin:5px;
-    border-radius:5px;
-}
+        .navbar a{
+            color:white;
+            text-decoration:none;
+            padding:12px 20px;
+            margin:5px;
+            border-radius:5px;
+        }
 
-.navbar a:hover{
-    background:#0074e4;
-}
+        .navbar a:hover{
+            background:#0074e4;
+        }
 
-.hero{
-    padding-top:120px;
-    text-align:center;
-    min-height:100vh;
-    background:#f3f8fc;
-}
+        .hero{
+            padding-top:120px;
+            text-align:center;
+            min-height:100vh;
+            background:#f3f8fc;
+            box-sizing:border-box;
+        }
 
-.logo{
-    width:350px;
-    max-width:90%;
-}
+        .logo{
+            width:350px;
+            max-width:90%;
+        }
 
-.btn{
-    background:#2f7d32;
-    color:#fff;
-    padding:15px 30px;
-    border-radius:6px;
-    display:inline-block;
-    margin-top:20px;
-}
+        .btn{
+            background:#2f7d32;
+            color:#fff;
+            padding:15px 30px;
+            border-radius:6px;
+            display:inline-block;
+            margin-top:20px;
+            text-decoration:none;
+        } 
+    </style>
+</head>
+<body>
+
+    <!-- แถบเมนูด้านบน -->
+    <div class="navbar">
+        <a href="#">หน้าแรก</a>
+        <a href="#about">เกี่ยวกับเรา</a>
+        <a href="#contact">ติดต่อเรา</a>
+    </div>
+
+    <!-- ส่วนเนื้อหาหลัก -->
+    <div class="hero">
+        <img src="https://via.placeholder.com/350x150?text=Company+Logo" alt="Logo" class="logo">
+        <h1>ยินดีต้อนรับสู่เว็บบริษัทของเรา</h1>
+        <p>เว็บตัวอย่างสำหรับทดสอบระบบบน Vercel</p>
+        <a href="#contact" class="btn">ติดต่อเราเลย</a>
+    </div>
+
+</body>
+</html>
