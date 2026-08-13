@@ -1,24 +1,49 @@
+นี่คือโค้ดเว็บไซต์ที่ได้รับการอัปเดตให้ครอบคลุมทั้ง **การแสดงผลฟอนต์ TH Sarabun แบบเต็มรูปแบบ** (เพิ่ม Fallback สำรองสำหรับเครื่องที่มีฟอนต์ TH Sarabun New/PSK ในเครื่องด้วย) และ **การเพิ่มลิงก์ไปยังบริษัทแม่ (L. Eternal Group)** ตามที่คุณต้องการครับ
+
+ผมได้เพิ่มข้อมูลของบริษัทแม่เข้าไปใน 2 จุดหลัก เพื่อให้ดูเป็นมืออาชีพและแนบเนียนที่สุด:
+
+1. **ในส่วน "ประวัติความเป็นมา (About Us)"**: เพิ่มข้อความอธิบายความเชื่อมโยงว่าเป็นบริษัทในเครือ
+2. **ในส่วน "Footer (ด้านล่างสุดของเว็บ)"**: เพิ่มลิงก์อ้างอิงถึงบริษัทแม่
+
+รวมถึงใส่รูปโลโก้ `Logo SCM_1.jpg` ที่เราคุยกันไว้ในแถบเมนูด้านบนให้เรียบร้อยครับ นำโค้ดนี้ไปทับไฟล์ `index.html` เดิมได้เลยครับ:
+
+```html
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SCM Energy Service Co., Ltd.</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        html { scroll-behavior: smooth; }
+        html { 
+            scroll-behavior: smooth; 
+        }
+        /* กำหนดให้ใช้ฟอนต์ TH Sarabun ทั้งหน้าเว็บ */
+        body {
+            font-family: 'Sarabun', 'TH Sarabun New', 'TH Sarabun PSK', sans-serif;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800">
 
     <nav class="bg-slate-900 text-white fixed w-full z-50 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center space-x-3">
-                    <i class="fa-solid fa-bolt text-yellow-500 text-3xl"></i>
-                    <span class="font-bold text-xl tracking-wider">SCM ENERGY SERVICE</span>
+                    <a href="#home" class="flex items-center space-x-3">
+                        <img src="Logo SCM_1.jpg" alt="SCM Energy Service Logo" class="h-12 w-auto object-contain bg-white rounded p-1">
+                        <span class="font-bold text-xl tracking-wider text-white">SCM ENERGY SERVICE</span>
+                    </a>
                 </div>
+                
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
                         <a href="#home" class="hover:text-yellow-400 transition duration-300">หน้าแรก</a>
@@ -60,6 +85,13 @@
                     <p class="text-gray-600 leading-relaxed">
                         เพื่อรองรับการเติบโตและการเปลี่ยนแปลงของเทคโนโลยีพลังงานในระดับสากล เราจึงได้เปลี่ยนผ่านสู่ชื่อ <strong>SCM Energy Service</strong> ขยายขอบเขตการดำเนินงานจากการสนับสนุนอุตสาหกรรมน้ำมันและก๊าซ ไปสู่นวัตกรรมพลังงานสะอาด พลังงานทดแทน และการบริหารจัดการพลังงานอย่างครบวงจร
                     </p>
+                    
+                    <div class="bg-slate-50 border-l-4 border-blue-600 p-4 rounded-r mt-4">
+                        <p class="text-gray-700 leading-relaxed">
+                            ปัจจุบัน <strong>SCM Energy Service</strong> ดำเนินธุรกิจในฐานะบริษัทในเครือของ <a href="https://www.leternalgroup.com/" target="_blank" class="text-blue-600 hover:text-blue-800 font-bold underline transition duration-300">บริษัท แอล. อีเทอร์นอล จำกัด (L. Eternal Co., Ltd.)</a> ซึ่งช่วยเสริมความแข็งแกร่งด้านเครือข่ายอุตสาหกรรมและขยายศักยภาพการให้บริการของเราให้ครอบคลุมยิ่งขึ้น
+                        </p>
+                    </div>
+
                     <div class="border-l-4 border-yellow-500 pl-4 py-2 bg-yellow-50 rounded-r">
                         <p class="font-semibold text-slate-800">"วิสัยทัศน์ของเราคือการเป็นพันธมิตรทางเทคโนโลยีพลังงานที่น่าเชื่อถือที่สุด และขับเคลื่อนอุตสาหกรรมไปสู่อนาคตอย่างมั่นคง"</p>
                     </div>
@@ -154,9 +186,19 @@
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-gray-400 py-8 text-center text-sm">
-        <p>&copy; 2026 SCM Energy Service Co., Ltd. (formerly SCM Oil Tools). All Rights Reserved.</p>
+    <footer class="bg-slate-900 text-gray-400 py-10 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <h4 class="text-white text-lg font-bold mb-2">SCM Energy Service Co., Ltd.</h4>
+            <p class="mb-4">ผู้นำด้านนวัตกรรมและอุปกรณ์พลังงาน</p>
+            
+            <div class="border-t border-gray-700 pt-6 mt-6">
+                <p>&copy; 2026 SCM Energy Service Co., Ltd. (formerly SCM Oil Tools). All Rights Reserved.</p>
+                <p class="mt-2 text-gray-500">A proud subsidiary of <a href="https://www.leternalgroup.com/" target="_blank" class="text-gray-300 hover:text-white underline transition duration-300">L. Eternal Co., Ltd.</a></p>
+            </div>
+        </div>
     </footer>
 
 </body>
 </html>
+
+```
